@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Store</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+    <div class="w-75 mx-auto my-5">
+        <div class="form-group">
+            <label for="productName">productName :</label>
+            <input onkeyup="Vailedname(this.value)" class="my-2 form-control" type="text" name="productName"
+                id="productName">
+            <small class="text-muted txc" id="sml-Name"> productName must be char only </small>
+        </div>
+        <div class="form-group">
+            <label for="productPrice">productPrice :</label>
+            <input onkeyup="VailedPrice(this.value)" value=0 class="my-2 form-control" type="number" name="productPrice"
+                id="productPrice">
+            <small class="text-muted" id="sml-Price"> productPrice must be number only </small>
+        </div>
+        <div class="form-group">
+            <label for="productCategory">productCategory :</label>
+            <input onkeyup="VailedCategory(this.value)" class="my-2 form-control" type="text" name="productCategory"
+                id="productCategory">
+            <small class="text-muted" id="sml-Cat"> productCategory must be char only </small>
+        </div>
+        <div class="form-group">
+            <label for="productDescription">productDescription :</label>
+            <textarea class="my-2 form-control areaTX" type="text" name="productDescription"
+                id="productDescription"> </textarea>
+            <small class="text-muted" id="sml-desc"> productDescription must be char only </small>
+        </div>
+
+        <button id="ADD" on class=" btn btn-outline-info my-2" onclick="GetProdect()">Add Product </button>
+    </div>
+
+
+    <div class="w-75 mx-auto m-5">
+        <label for="search">Search by Prodeuct Name :</label>
+        <input type="search" class="form-control" id="search" name="search" onkeyup="search(this.value)">
+    </div>
+
+
+
+
+    <div class="row d-flex w-75 mx-auto">
+        <div class="data">
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th scope="row"> # </th>
+                        <th scope="col"> Name </th>
+                        <th scope="col"> Price </th>
+                        <th scope="col"> Category </th>
+                        <th scope="col"> Discription </th>
+                        <th scope="col"> Updata</th>
+                        <th scope="col"> Delete</th>
+                    </tr>
+
+                </thead>
+                <tbody id="tbodyData">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+
+    <script src='js/main.js'></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
